@@ -1,0 +1,39 @@
+category,cwe_id,cwe_name,owasp_web,owasp_api,owasp_mobile,owasp_llm,mitre_tactic,mitre_technique_id,mitre_technique_name,nist_function,nist_category
+Authentication,CWE-287,Improper Authentication,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM07:Insecure Plugin Design,Credential Access,T1110,Brute Force,Protect,PR.AC
+Authentication,CWE-307,Improper Restriction of Auth Attempts,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM07:Insecure Plugin Design,Credential Access,T1110,Brute Force,Protect,PR.AC
+Authentication,CWE-522,Insufficiently Protected Credentials,A07:Authentication Failures,API2:Broken Authentication,M1:Improper Credential Usage,LLM06:Sensitive Info Disclosure,Credential Access,T1555,Credentials from Password Stores,Protect,PR.AC
+Authentication,CWE-613,Insufficient Session Expiration,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM08:Excessive Agency,Defense Evasion,T1078,Valid Accounts,Protect,PR.AC
+Authentication,CWE-384,Session Fixation,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM08:Excessive Agency,Defense Evasion,T1078,Valid Accounts,Protect,PR.AC
+Authentication,CWE-620,Unverified Password Change,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM07:Insecure Plugin Design,Credential Access,T1110,Brute Force,Protect,PR.AC
+Authentication,CWE-640,Weak Password Recovery,A07:Authentication Failures,API2:Broken Authentication,M3:Insecure Authentication,LLM07:Insecure Plugin Design,Credential Access,T1110,Brute Force,Protect,PR.AC
+Access Control,CWE-284,Improper Access Control,A01:Broken Access Control,API1:BOLA,M3:Insecure Authorization,LLM08:Excessive Agency,Privilege Escalation,T1068,Exploitation for Privilege Escalation,Protect,PR.AC
+Access Control,CWE-425,Forced Browsing,A01:Broken Access Control,API5:Broken Function Auth,M3:Insecure Authorization,LLM08:Excessive Agency,Privilege Escalation,T1078,Valid Accounts,Protect,PR.AC
+Access Control,CWE-639,IDOR,A01:Broken Access Control,API1:BOLA,M3:Insecure Authorization,LLM08:Excessive Agency,Collection,T1213,Data from Information Repositories,Protect,PR.AC
+Access Control,CWE-602,Client-Side Enforcement,A01:Broken Access Control,API5:Broken Function Auth,M3:Insecure Authorization,LLM08:Excessive Agency,Defense Evasion,T1562,Impair Defenses,Protect,PR.AC
+Access Control,CWE-601,Open Redirect,A01:Broken Access Control,API8:Security Misconfiguration,M8:Security Misconfiguration,LLM02:Insecure Output Handling,Initial Access,T1566,Phishing,Protect,PR.AC
+Injection,CWE-79,XSS (Generic),A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM02:Insecure Output Handling,Initial Access,T1190,Exploit Public-Facing Application,Protect,PR.DS
+Injection,CWE-79,XSS (Stored),A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM02:Insecure Output Handling,Initial Access,T1190,Exploit Public-Facing Application,Protect,PR.DS
+Injection,CWE-79,XSS (Reflected),A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM02:Insecure Output Handling,Initial Access,T1190,Exploit Public-Facing Application,Protect,PR.DS
+Injection,CWE-79,XSS (DOM),A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM02:Insecure Output Handling,Initial Access,T1190,Exploit Public-Facing Application,Protect,PR.DS
+Injection,CWE-89,SQL Injection,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM01:Prompt Injection,Initial Access,T1190,Exploit Public-Facing Application,Protect,PR.DS
+Injection,CWE-77,Command Injection,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,MCP05:Command Injection,Execution,T1059,Command and Scripting Interpreter,Protect,PR.IP
+Injection,CWE-78,OS Command Injection,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,MCP05:Command Injection,Execution,T1059,Command and Scripting Interpreter,Protect,PR.IP
+Injection,CWE-94,Code Injection,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM01:Prompt Injection,Execution,T1059,Command and Scripting Interpreter,Protect,PR.IP
+Injection,CWE-918,SSRF,A05:Injection,API7:SSRF,M8:Misconfiguration,LLM06:Sensitive Info Disclosure,Initial Access,T1190,Exploit Public-Facing Application,Detect,DE.CM
+Injection,CWE-22,Path Traversal,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM02:Insecure Output Handling,Collection,T1005,Data from Local System,Protect,PR.DS
+Injection,CWE-611,XXE,A05:Injection,API8:Security Misconfiguration,M4:Input Validation,LLM06:Sensitive Info Disclosure,Collection,T1005,Data from Local System,Protect,PR.DS
+Injection,CWE-776,XML Entity Expansion,A05:Injection,API4:Resource Consumption,M5:Insecure Communication,LLM04:Model DoS,Impact,T1499,Endpoint DoS,Respond,RS.MI
+Access Control,CWE-352,CSRF,A01:Broken Access Control,API5:Broken Function Auth,M3:Insecure Authorization,LLM08:Excessive Agency,Defense Evasion,T1620,Reflective Code Loading,Protect,PR.AC
+Injection,CWE-444,HTTP Request Smuggling,A02:Security Misconfiguration,API8:Security Misconfiguration,M8:Security Misconfiguration,LLM02:Insecure Output Handling,Initial Access,T1190,Exploit Public-Facing Application,Detect,DE.CM
+Information Disclosure,CWE-200,Information Disclosure,A02:Security Misconfiguration,API8:Security Misconfiguration,M9:Insecure Data Storage,LLM06:Sensitive Info Disclosure,Collection,T1213,Data from Repositories,Protect,PR.DS
+Information Disclosure,CWE-209,Error Message Info Leak,A02:Security Misconfiguration,API8:Security Misconfiguration,M8:Security Misconfiguration,LLM06:Sensitive Info Disclosure,Collection,T1083,File and Directory Discovery,Protect,PR.DS
+Information Disclosure,CWE-215,Debug Info Leak,A02:Security Misconfiguration,API8:Security Misconfiguration,M8:Security Misconfiguration,LLM06:Sensitive Info Disclosure,Collection,T1083,File and Directory Discovery,Protect,PR.DS
+Information Disclosure,CWE-548,Directory Listing,A02:Security Misconfiguration,API8:Security Misconfiguration,M8:Security Misconfiguration,LLM06:Sensitive Info Disclosure,Collection,T1083,File and Directory Discovery,Protect,PR.DS
+Availability,CWE-400,Uncontrolled Resource Consumption,A10:Exceptional Conditions,API4:Resource Consumption,M5:Insecure Communication,LLM04:Model DoS,Impact,T1499,Endpoint DoS,Respond,RS.MI
+Availability,CWE-190,Integer Overflow,A10:Exceptional Conditions,API4:Resource Consumption,M5:Insecure Communication,LLM04:Model DoS,Impact,T1499,Endpoint DoS,Respond,RS.MI
+Cryptography,CWE-312,Cleartext Storage,A04:Cryptographic Failures,API8:Security Misconfiguration,M9:Insecure Storage,LLM06:Sensitive Info Disclosure,Credential Access,T1555,Credentials from Password Stores,Protect,PR.DS
+Cryptography,CWE-319,Cleartext Transmission,A04:Cryptographic Failures,API8:Security Misconfiguration,M5:Insecure Communication,LLM06:Sensitive Info Disclosure,Credential Access,T1040,Network Sniffing,Protect,PR.DS
+Cryptography,CWE-326,Weak Encryption,A04:Cryptographic Failures,API8:Security Misconfiguration,M10:Insufficient Cryptography,LLM06:Sensitive Info Disclosure,Credential Access,T1552,Unsecured Credentials,Protect,PR.DS
+Cryptography,CWE-327,Broken Crypto,A04:Cryptographic Failures,API8:Security Misconfiguration,M10:Insufficient Cryptography,LLM06:Sensitive Info Disclosure,Credential Access,T1552,Unsecured Credentials,Protect,PR.DS
+Cryptography,CWE-798,Hard-coded Credentials,A04:Cryptographic Failures,API2:Broken Authentication,M1:Improper Credential Usage,LLM06:Sensitive Info Disclosure,Credential Access,T1552,Unsecured Credentials,Protect,PR.AC
+Cryptography,CWE-259,Hard-coded Password,A04:Cryptographic Failures,API2:Broken Authentication,M1:Improper Credential Usage,LLM06:Sensitive Info Disclosure,Credential Access,T1552,Unsecured Credentials,Protect,PR.AC

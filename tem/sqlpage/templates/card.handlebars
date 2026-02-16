@@ -1,0 +1,116 @@
+{{#if title}}
+    <h2 class="mt-3 mb-0">{{title}}</h2>
+{{/if}}
+{{#if description}}
+    <p>{{description}}</p>
+{{/if}}
+{{#if description_md}}
+    {{{markdown description_md}}}
+{{/if}}
+<div class="row gx-2 gy-2 mt-1 mb-3 {{class}}
+    {{~#if columns~}}
+        {{#if (gt columns 2)}} row-cols-sm-2 {{/if}}
+        row-cols-lg-{{columns}}
+    {{/if}}">
+    {{#each_row}}
+        <div class="
+        {{#unless ../columns}}
+            {{~#if width~}}
+                {{~#if (lt width 6)}} col-12 col-md-6 {{/if~}}
+                col-lg-{{width~}}
+            {{~else~}}
+                col-12 col-md-6 col-lg-3
+            {{~/if~}}
+        {{/unless}} {{class}}"
+        {{~#if id}} id="{{id}}"{{/if}}>
+            <div class="card h-100
+                {{~#if active}} card-active {{/if~}}
+                {{~#if background_color}}
+                    bg-{{background_color}} text-{{background_color}}-fg
+                {{~else}}
+                    {{#if (all embed (not title) (not icon))}}
+                        bg-transparent border-0
+                    {{/if}}
+                {{/if}}
+                "
+                {{#if (and embed (ne embed_mode "iframe"))}}data-pre-init="card" data-embed="{{embed}}"{{/if}}>
+                {{#if link}}
+                    <a href="{{link}}" style="text-decoration: inherit; color: inherit">
+                {{/if}}
+                {{#if top_image}}
+                    <img src="{{top_image}}" class="card-img-top" />
+                {{/if}}
+                {{#if color}}
+                    {{#if (not embed)}}
+                         <div class="card-status-start bg-{{color}}"></div>
+                    {{/if}}
+                {{/if}}
+                <div class="card-body {{#if (all embed (not title) (not icon))}}p-0{{/if}}">
+                    {{#if title}}<h2 class="card-title fs-3 me-3">{{title}}</h2>{{/if}}
+                    <div class="card-content remove-bottom-margin{{#if (and icon (not title))}} pe-4{{/if}}">
+                        {{~description~}}
+                        {{~#if description_md~}}
+                            {{{markdown description_md}}} 
+                            {{~#if description_md2~}}
+                             <span class="ms-3" title="Critical Issues" style="color:#d63939;" ><strong>{{{markdown description_md2}}}</strong></span> <span class="mx-1 text-secondary">/</span>
+                            {{~/if~}}
+                            {{~#if description_md3~}}
+                                <span title="High Issues" style="color: #f76707;"><strong>{{{markdown description_md3}}}</strong></span>  <span class="mx-1 text-secondary">/</span>
+                            {{~/if~}}
+                            {{~#if description_md4~}}
+                                  <span  title="Medium Issues" style="color: #f59f00;"><strong>{{{markdown description_md4}}}</strong></span> <span class="mx-1 text-secondary">/</span>
+                            {{~/if~}}
+                            {{~#if description_md5~}}
+                                  <span title="Low Issues" style="color:#5e81f5;"><strong>{{{markdown description_md5}}}</strong></span>   
+                            {{~/if~}}
+                            {{~#if description_md6~}}
+                                  <span class="ms-auto">{{{markdown description_md6}}}</span>
+                            {{~/if~}}
+                            
+                        {{~/if~}}
+                    </div>
+                    {{~#if embed ~}}
+                    {{~#if (eq embed_mode "iframe")}}
+                        <iframe src="{{embed}}" 
+                            width="{{#if width}}{{width}}{{else}}100%{{/if}}"
+                            {{~#if height}} height="{{height}}"{{/if~}}
+                            {{~#if allow}} allow="{{allow}}"{{/if~}}
+                            {{~#if sandbox}} sandbox="{{sandbox}}"{{/if~}}
+                            {{~#if style}} style="{{style}}"{{/if~}}
+                        >
+                        </iframe>
+                    {{~else~}}
+                        <div class="d-flex justify-content-center h-100 align-items-center card-loading-placeholder">
+                            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    {{~/if~}}
+                    {{~/if~}}
+                </div>
+                {{#if link}}
+                    </a>
+                {{/if}}
+                {{#if footer}}
+                    <div class="card-footer text-muted py-2">
+                    {{#if footer_link}}
+                            <a href="{{footer_link}}">{{footer}}</a>
+                    {{else}}
+                            {{footer}}
+                    {{/if}}
+                    </div>
+                {{/if}}
+                {{#if footer_md}}
+                    <div class="card-footer text-muted py-2 remove-bottom-margin">
+                        {{{markdown footer_md}}}
+                    </div>
+                {{/if}}
+                {{#if icon}}
+                    <div class="ribbon bg-{{color}} fs-2">
+                        {{~icon_img icon~}}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    {{/each_row}}
+</div>

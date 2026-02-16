@@ -1,0 +1,94 @@
+.right_align .card-content{
+    display: flex;
+    justify-content: space-between;
+}
+/* Dropdown */
+.select-end .form-fieldset .row{
+    justify-content: end !important;
+}
+
+.select-end .form-fieldset {
+    border: none !important;
+}
+.select-end {
+   margin: -9px -17px -10px 0px !important;
+}
+.btn-custom .btn-primary{
+    float: right !important;
+}
+.card-custom .card-content p{
+    font-size: 25px !important;
+    font-weight: 600 !important;
+}
+.card-custom .card-title{
+    font-weight: bold !important;
+}
+.modal-custom .modal-dialog{
+    max-width: 65% !important;
+}
+
+ /* Fullscreen modal container */
+/* .penetration_modal_custom .modal-dialog {
+    max-width: 100vw !important;
+    height: 100vh !important;
+} */
+/* Modal container */
+.penetration_modal_custom {
+    padding: 0 !important;
+}
+
+/* Dialog wrapper */
+.penetration_modal_custom .modal-dialog {
+    max-width: 100vw !important;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Modal content */
+.penetration_modal_custom .modal-content {
+    height: 100vh;
+    border-radius: 0;
+}
+
+/* Scroll only inside body */
+.penetration_modal_custom .modal-body {
+    overflow-y: auto;
+    height: calc(100vh - 56px); /* adjust if you have header/footer */
+}
+
+.chart-custom .card{
+    border: none !important;
+}
+.chart-custom .card-title{
+    font-weight: bold !important;
+}
+/* Make h3 look like h2 inside foldable-custom */
+.foldable-custom .accordion-body h3 {
+    font-size: 1.5rem !important;    
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.75rem !important;
+}
+.foldable-custom .accordion-body p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+}
+.foldable-custom .accordion-body p:first-of-type > a {
+    float: right;
+  }
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+
+
